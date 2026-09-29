@@ -1,0 +1,8 @@
+{"op":"init","accounts":[{"id":"cash","name":"现金"},{"id":"income","name":"收入"},{"id":"rent","name":"房租"}]}
+{"op":"post","id":"V1","date":"2026-01-10","summary":"销售收入","entries":[{"account_id":"cash","direction":"debit","amount":1000},{"account_id":"income","direction":"credit","amount":1000}]}
+{"op":"post","id":"V2","date":"2026-01-20","summary":"不平衡示例(应失败)","entries":[{"account_id":"cash","direction":"debit","amount":10},{"account_id":"income","direction":"credit","amount":9}]}
+{"op":"reverse","original_id":"V1","id":"R1","date":"2026-01-25","summary":"冲销一月销售"}
+{"op":"get_voucher","id":"V1"}
+{"op":"account_ledger","account_id":"cash"}
+{"op":"period_report","from":"2026-01-01","to":"2026-01-31"}
+{"op":"trial_balance","as_of":"2026-01-31"}
