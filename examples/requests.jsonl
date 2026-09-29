@@ -1,0 +1,7 @@
+{"op":"init","accounts":[{"code":"1001","name":"Cash"},{"code":"4001","name":"Revenue"},{"code":"2001","name":"Payable"}]}
+{"op":"post","voucher":{"id":"V1","date":"2026-01-15","summary":"sale","entries":[{"account":"1001","direction":"debit","amount":50000},{"account":"4001","direction":"credit","amount":50000}]}}
+{"op":"post","voucher":{"id":"V0","date":"2026-01-05","summary":"backdated","entries":[{"account":"2001","direction":"debit","amount":1200},{"account":"1001","direction":"credit","amount":1200}]}}
+{"op":"post","voucher":{"id":"BAD","date":"2026-01-20","summary":"x","entries":[{"account":"1001","direction":"debit","amount":10},{"account":"4001","direction":"credit","amount":9}]}}
+{"op":"reverse","reverse":{"original_id":"V1","new_id":"R1","date":"2026-02-01"}}
+{"op":"period_report","from":"2026-01-01","to":"2026-01-31"}
+{"op":"trial_balance","from":"2026-01-01","to":"2026-02-28"}
